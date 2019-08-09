@@ -20,7 +20,7 @@ if errorlevel 6 set "AC=P4PV2" & set "fcn1=03.03.04." & cd P4PV2 & set "m=wm335"
 if errorlevel 5 set "AC=P4adv" & set "fcn1=03.02.35." & cd P4adv & set "m=wm332" & goto else
 if errorlevel 4 set "AC=P4std" & set "fcn1=03.02.44." & cd P4std & set "m=wm330" & goto else
 if errorlevel 3 set "AC=P4P" & set "fcn1=03.02.44." & cd p4p & set "m=wm331" & goto else
-if errorlevel 2 set "AC=Spark" & set "fcn1="03.02.43." & cd spark & set "m=wm100" & goto else
+if errorlevel 2 set "AC=Spark" & set "fcn1=03.02.43." & cd spark & set "m=wm100" & goto else
 if errorlevel 1 set "AC=Mavic" & set "fcn1=03.02.44." & cd mavic & set "m=wm220" & goto else
 
 :else
