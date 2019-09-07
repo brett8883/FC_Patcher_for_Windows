@@ -38,7 +38,7 @@ cd components
 echo %infos%
 copy %infos% %cd%
 @echo on
-wsl.exe export PATH_TO_TOOLS=/mnt/c/Users/Brett/Desktop/SP2/tools ; ./FC_patch_sequence_for_dummy_verify.sh %AC% %fcn1%%fcn2%
+Busybox export PATH_TO_TOOLS=/mnt/c/Users/Brett/Desktop/SP2/tools ; ./FC_patch_sequence_for_dummy_verify.sh %AC% %fcn1%%fcn2%
 copy *_dummy_verify.bin %SP2%
 cd %SP2%
 if "%AC%"=="Mavic" set AC=MavicPro
