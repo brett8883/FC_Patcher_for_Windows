@@ -130,10 +130,10 @@ if __name__ == "__main__":
     # "B5620616080000010100000000002697"
 
     #   New UBX-CFG-PMS : use GNSS chip at max power
-    newubxframes = newubxframes + ubxcfggen.genUBXCFGPMS(0x0,0,0)
+    newubxframes = newubxframes + ubxcfggen.genUBXCFGPMS(0x1,0,0)
     # "B562068608000000000000000000945A"    
     #horizonMask=5,minCN0=0,minSv=0,pDop=10.0,tDop=10.0,pAcc=30,tAcc=300,fixedAlt2D=0.0,fixedAltVar2D=1.0,staticHoldMaxSpeed=0,staticHoldMaxDist=0,dgnssTimeout=60
-    newubxframes = newubxframes + ubxcfggen.genUBXCFGNAV5(7,2,0,5,0,0,10.0,10.0,30,300,0.0,1.0,0,0,60)
+    newubxframes = newubxframes + ubxcfggen.genUBXCFGNAV5(0,3,0,5,0,0,25.0,25.0,100,300,0.0,1.0,0,0,60)
     # "B56206242400FFFF070200000000102700000500640064001E002C01003C000000000000000000000000E061"    
 
     #   New UBX-CFG-GNSS frame :
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     #useBEIDOU=False,minBEIDOU=8,maxBEIDOU=16,
     #useQZSS=True,minQZSS=0,maxQZSS=3, (ublox recommands to always have QZSS & GPS together to avoir cross corelation issues)
     #useIMES=False,minIMES=0,maxIMES=8
-    newubxframes = newubxframes + ubxcfggen.genUBXCFGGNSS(True,8,16,True,8,14,True,8,10,False,0,2,False,8,16,True,0,3,False,0,8)
+    newubxframes = newubxframes + ubxcfggen.genUBXCFGGNSS(True,8,16,True,8,14,False,8,10,False,0,2,False,8,16,True,0,3,False,0,8)
     # "B562063E3C00002020070008100001000101010002000000010102080A000100010103081000000001010400080000000101050003000100010106080E0001000101536C"
     
     # END OF REPLACING UBX-CFG-CFG BY OTHER SET OF FRAMES
