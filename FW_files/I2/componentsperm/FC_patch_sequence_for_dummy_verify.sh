@@ -148,7 +148,8 @@ echo "               Adding U-Blox custom configuration"
 echo "################################################################################"
 
 # call it using python version 2
-python2 "$PATH_TO_TOOLS"/DJI_FC_Patcher/patch_"$AC_PREFIX"_"$MODULE".py $TMP_FILENAME1 $VERSION
+# BRETT8883) Why do we need python2? Removing "2" leaving python
+python "$PATH_TO_TOOLS"/DJI_FC_Patcher/patch_"$AC_PREFIX"_"$MODULE".py $TMP_FILENAME1 $VERSION
 if [ $? != 0 ]
 then
     echo "#### Issue while patching module ####"

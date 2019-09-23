@@ -1,6 +1,8 @@
 @echo off
 SETLOCAL EnableDelayedExpansion
-set SP2=%cd%
+set Patcher_="%cd%"
+set busybox="%cd%\busybox.exe"
+set PATH_TO_TOOLS=%cd%\tools
 cd FW_files
 set fwf=%cd%
 echo.
@@ -30,6 +32,7 @@ set /p fcn2="flight controller number ex: %fcn1%xx?"
 echo %fcn1%%fcn2%
 set /p infos="path to flyc_parm_infos file?"
 set /p newname="new file name?"
+
 cd components
 del /q /f *
 cd ..
@@ -37,14 +40,13 @@ copy componentsperm components
 cd components
 echo %infos%
 copy %infos% %cd%
-@echo on
-Busybox export PATH_TO_TOOLS=/mnt/c/Users/Brett/Desktop/SP2/tools ; ./FC_patch_sequence_for_dummy_verify.sh %AC% %fcn1%%fcn2%
-copy *_dummy_verify.bin %SP2%
-cd %SP2%
+busybox sh ./FC_patch_sequence_for_dummy_verify.sh %AC% %fcn1%%fcn2%
+copy *_dummy_verify.bin %Patcher_%
+cd %Patcher_%
 if "%AC%"=="Mavic" set AC=MavicPro
 ren "dji_system_%m%_0306_%fcn1%%fcn2%_dummy_verify.bin" "%AC%_%newname%_%fcn1%%fcn2%_dji_system.bin"
-pause
 ENDLOCAL
+pause
 exit
 
 :I2
