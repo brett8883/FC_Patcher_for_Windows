@@ -16,7 +16,7 @@
 		"attribute" : 57,
 		"minValue" : 0,
 		"maxValue" : 255,
-		"defaultValue" : 1,
+		"defaultValue" : 0,
 		"name" : "g_config.airport_limit_cfg.cfg_disable_airport_fly_limit"
 	},
 	{
@@ -26,7 +26,7 @@
 		"attribute" : 42,
 		"minValue" : 0,
 		"maxValue" : 4294967295,
-		"defaultValue" : 20250910,
+		"defaultValue" : 20150910,
 		"name" : "g_config.airport_limit_cfg.cfg_limit_data"
 	},
 	{
@@ -36,7 +36,7 @@
 		"attribute" : 50,
 		"minValue" : 0,
 		"maxValue" : 1,
-		"defaultValue" : 0,
+		"defaultValue" : 1,
 		"name" : "g_config.flying_limit.driver_license_limit_enable"
 	},
 	{
@@ -46,7 +46,7 @@
 		"attribute" : 51,
 		"minValue" : 0,
 		"maxValue" : 1,
-		"defaultValue" : 0,
+		"defaultValue" : 1,
 		"name" : "g_config.flying_limit.viechle_license_limit_enable"
 	},
 	{
@@ -56,7 +56,7 @@
 		"attribute" : 43,
 		"minValue" : 1,
 		"maxValue" : 2,
-		"defaultValue" : 2,
+		"defaultValue" : 1,
 		"name" : "g_config.flying_limit.height_limit_enabled",
 		"modify" : true
 	},
@@ -77,7 +77,7 @@
 		"attribute" : 39,
 		"minValue" : 0,
 		"maxValue" : 1,
-		"defaultValue" : 1,
+		"defaultValue" : 0,
 		"name" : "g_cfg_debug.motor.no_start_motor_check"
 	},
 	{
@@ -318,7 +318,7 @@
 		"attribute" : 45,
 		"minValue" : 0,
 		"maxValue" : 65535,
-		"defaultValue" : 1,
+		"defaultValue" : 50000,
 		"name" : "g_config.airport_limit_cfg.cfg_search_radius"
 	},
 	{
@@ -1535,8 +1535,8 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 41,
-		"minValue" : 1.000000,
-		"maxValue" : 200.000000,
+		"minValue" : 30.000000,
+		"maxValue" : 90.000000,
 		"defaultValue" : 70.000000,
 		"name" : "g_config.avoid_cfg.avoid_tors_rate_range"
 	},
@@ -2042,7 +2042,7 @@
 		"attribute" : 39,
 		"minValue" : 0.000000,
 		"maxValue" : 100000.000000,
-		"defaultValue" : 10000.000000,
+		"defaultValue" : 5.000000,
 		"name" : "g_config.flying_limit.limit_height_rel"
 	},
 	{
@@ -2052,7 +2052,7 @@
 		"attribute" : 39,
 		"minValue" : 0.000000,
 		"maxValue" : 100000.000000,
-		"defaultValue" : 10000.000000,
+		"defaultValue" : 50.000000,
 		"name" : "g_config.flying_limit.limit_height_abs"
 	},
 	{
@@ -2062,7 +2062,7 @@
 		"attribute" : 51,
 		"minValue" : 0.000000,
 		"maxValue" : 100000.000000,
-		"defaultValue" : 10000.000000,
+		"defaultValue" : 30.000000,
 		"name" : "g_config.flying_limit.limit_height_abs_without_gps"
 	},
 	{
@@ -7388,7 +7388,7 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 41,
-		"minValue" : 1.000000,
+		"minValue" : 50.000000,
 		"maxValue" : 250.000000,
 		"defaultValue" : 100.000000,
 		"name" : "g_config.mode_normal_cfg.tors_gyro_range"
@@ -7498,7 +7498,7 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 40,
-		"minValue" : 1.000000,
+		"minValue" : 30.000000,
 		"maxValue" : 300.000000,
 		"defaultValue" : 200.000000,
 		"name" : "g_config.mode_sport_cfg.tors_gyro_range"
@@ -7694,9 +7694,9 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 14,
-		"minValue" : 1.000000,
+		"minValue" : 50.000000,
 		"maxValue" : 250.000000,
-		"defaultValue" : 5.000000,
+		"defaultValue" : 50.000000,
 		"name" : "CM_tors_range"
 	},
 	{
@@ -7837,7 +7837,7 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 41,
-		"minValue" : 1.000000,
+		"minValue" : 10.000000,
 		"maxValue" : 90.000000,
 		"defaultValue" : 30.000000,
 		"name" : "g_config.mode_tripod_cfg.tors_gyro_range"
@@ -7848,7 +7848,7 @@
 		"size" : 4,
 		"attribute" : 37,
 		"minValue" : 0.500000,
-		"maxValue" : 10.000000,
+		"maxValue" : 3.000000,
 		"defaultValue" : 1.000000,
 		"name" : "g_config.mode_tripod_cfg.vert_vel_up"
 	},
@@ -7857,7 +7857,7 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 39,
-		"minValue" : -10.000000,
+		"minValue" : -3.000000,
 		"maxValue" : -0.500000,
 		"defaultValue" : -1.000000,
 		"name" : "g_config.mode_tripod_cfg.vert_vel_down"
@@ -7927,7 +7927,7 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 41,
-		"minValue" : 1.000000,
+		"minValue" : 10.000000,
 		"maxValue" : 500.000000,
 		"defaultValue" : 150.000000,
 		"name" : "g_config.mode_manual_cfg.tors_gyro_range"
@@ -8170,9 +8170,9 @@
 		"typeID" : 8,
 		"size" : 4,
 		"attribute" : 40,
-		"minValue" : 5.000000,
+		"minValue" : 30.000000,
 		"maxValue" : 300.000000,
-		"defaultValue" : 25.000000,
+		"defaultValue" : 90.000000,
 		"name" : "g_config.waypoint_cfg.max_auto_yaw_rate"
 	},
 	{
@@ -9925,7 +9925,7 @@
 		"attribute" : 46,
 		"minValue" : 0,
 		"maxValue" : 1,
-		"defaultValue" : 1,
+		"defaultValue" : 0,
 		"name" : "g_config.fdi_open.close_auto_stop_motor_check"
 	},
 	{
@@ -11202,7 +11202,7 @@
 		"attribute" : 62,
 		"minValue" : 0,
 		"maxValue" : 1,
-		"defaultValue" : 0,
+		"defaultValue" : 1,
 		"name" : "g_config.airport_limit_cfg.cfg_enable[FLY_LIMIT_TYPE_AIRPORT]"
 	},
 	{
